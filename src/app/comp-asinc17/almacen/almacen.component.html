@@ -1,7 +1,26 @@
 <table>
   <thead>
     <tr>
-      th*
+      <th>ID</th>
+      <th>Código</th>
+      <th>Descripción</th>
+      <th>Precio de compras</th>
+      <th>Precio de venta</th>
+      <th>Ganancia</th>
+      <th>Existencia</th>
+      <th>Editar</th>
     </tr>
   </thead>
+  <tbody>
+    <tr *ngFor="let x of almacen">
+      <td>{{x.id}}</td>
+      <td>{{x.cod}}</td>
+      <td>{{x.descript}}</td>
+      <td>{{x.compra}}</td>
+      <td>{{x.venta}}</td>
+      <td>{{x.venta-x.compra}}</td>
+      <td>{{x.Existencia}}</td>
+      <td><button><span class="bi bi-pencil-square"></span></button></td>
+    </tr>
+  </tbody>
 </table>
