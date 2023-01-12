@@ -1,3 +1,5 @@
+import { AlmacenServiceService } from './../../service/almacen-service.service';
+import { ActivatedRoute, Router, Routes } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -14,44 +16,16 @@ export class AlmacenComponent implements OnInit {
       "compra":10,
       "venta":15,
       "Existencia":100
-    },
-    {
-      "id":2,
-      "cod":2,
-      "descript":"Mermelada de fresa",
-      "compra":65,
-      "venta":80,
-      "Existencia":100
-    },
-    {
-      "id":3,
-      "cod":3,
-      "descript":"Aceite",
-      "compra":18,
-      "venta":20,
-      "Existencia":100
-    },
-    {
-      "id":4,
-      "cod":4,
-      "descript":"Palomitas de maiz",
-      "compra":12,
-      "venta":15,
-      "Existencia":100
-    },
-    {
-      "id":5,
-      "cod":5,
-      "descript":"Doritos",
-      "compra":5,
-      "venta":8,
-      "Existencia":100
     }
   ]
 
-  constructor() { }
+  constructor(private router:Router, private route:ActivatedRoute, private almacenService:AlmacenServiceService) { }
 
+  editar(id:number){
+    this.router.navigate(['/editar',id])
+  }
   ngOnInit(): void {
+    this.almacen=this.almacenService.almacen
   }
 
 }
