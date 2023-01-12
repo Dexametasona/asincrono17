@@ -1,0 +1,18 @@
+:host{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.form{
+    display: grid;
+    grid-template: repeat(7, min-content)/30px 1fr;
+    align-items: center;
+    gap: 5px 5px;
+}
+.boton{
+    grid-column: span 2;
+    display: flex;
+    justify-content: space-around;
+}

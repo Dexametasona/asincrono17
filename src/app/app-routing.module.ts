@@ -5,7 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {path:'almacen', component:AlmacenComponent},
-  {path:'editar', component:EditarComponent},
+  {path:'editar/:id', component:EditarComponent},
   {path:'', redirectTo:'/almacen', pathMatch:'full'}
 ];
 
